@@ -107,6 +107,9 @@ h1{
 section{
     padding:80px 0px;
 }
+.section-features{
+    margin-bottom: 100px;
+}
 h2{
     font-weight: 300;
     text-transform:uppercase;
@@ -128,6 +131,7 @@ h2::after{
     line-height:145%;
     width:70%;
     margin-left:17%;
+
 }
 .box{
     padding:1%;
@@ -159,16 +163,28 @@ h3{
 
 }
 .meals-showcase li{
+    display:block;
     float:left;
     width:25%;
-    display:block;
+    height: 250px;
 }
 
 .meal-photo{
  width:100%;
+ height: inherit;
    margin:0;
+   overflow: hidden;
+   background-color: #000;
+
 }
 .meal-photo img{
     width:100%;
-    height:auto;
+    height:100%;
+    transform: scale(1.15);
+    opacity:0.7;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.meal-photo img:hover{
+    transform: scale(1);
+    opacity:1;
 }
